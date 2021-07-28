@@ -1,0 +1,140 @@
+/*CSS global, fix lỗi unknow Element trên trình duyệt chưa cập nhật*/
+header, section, footer, aside, nav, main,article, figure{
+    display: block;
+}
+/*Trang web sát vìa và apply cho toàn bộ web*/
+body {
+    margin:0% 
+}
+/* Sử dụng 1 rem bằng 20px khai báo trên thẻ html*/
+html{
+    font-size: 20px;
+}
+h1{
+    margin: 0%;
+}
+a{
+    text-decoration: none;
+}
+/*Tất cả các thẻ trong web sử dụng thuộc tính box-sizing:borderbox
+*/
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+/*CSS padding dùng chung*/
+.section_padding{
+    width: 80%;
+    margin: auto;
+}
+/*-------------------------------------------------------*/
+
+
+/*Header CSS*/
+header{
+    background-color:#ba68c8;
+
+}
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    display: inline;
+    list-style: none;
+    padding: 20px;
+    margin-right: -1%;
+}
+nav ul li:hover{
+    background-color: #b64fc8;
+
+}
+header a {
+    color: white;
+}
+/*-------------------------------------------------------*/
+
+/*Carosel*/
+.carosel{
+    background-image: linear-gradient(rgba(65, 63, 63, 0.637), rgba(65, 63, 63, 0.637)),url("../img/backgroundcake.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carosel__content{
+    text-align: center;
+    color: white;
+}
+.carosel__content h1{
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: 'Staatliches', cursive;
+}
+.carosel__content p{
+    font-size: 0.8rem;
+    padding: 0%;
+}
+.carosel__button{
+    background-color: #ba68c8;
+    padding: 15px;
+    border: 2px solid #ba68c8 ;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+}
+.carosel__button:hover{
+    background-color: transparent;
+}
+.carosel__button{
+    cursor: pointer;
+}
+/*-------------------------------------------------------*/
+/*Grid div*/
+
+.intro{
+    display: grid;
+    grid-template-columns: repeat(4,1fr); /*Chia thẻ các thẻ section thành 4 vùng div, mỗi vùng 1 fr*/
+}
+.intro_item{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.intro_item img {
+    max-width: 100%;
+    display: block;
+}
+.intro-img1{
+    grid-column: 2/span 2; /*Gom 2 cột*, số đầu tiên là số cột mà vị trí ảnh đang nằm, số thứ 2 là số cột muốn gom*/
+}
+.intro-best{
+    grid-column: 1/span 2;
+    background-color: #ffb2ff;
+}
+.intro-img3{
+    background-position: -55px -90px;
+}
+.intro-img4{
+    grid-column: 3/span 2;
+    width: 100%;
+    display: block;
+}
+.intro-tradition{
+    background-color: #9e00c5;
+}
+.intro-creative{
+    background-color: #ff5bff;
+}
+.intro-quality{
+    background-color: #ed6498;
+}
+.intro-cakes{
+    background-color: #9e00c5;
+    max-height: 475px;
+}
